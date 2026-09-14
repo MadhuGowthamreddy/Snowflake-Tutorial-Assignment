@@ -1,5 +1,4 @@
 Smart Electricity Consumption Data Warehouse
-
 Project overview
 This project implements a data warehouse and data-mining workflow for analysing smart-meter electricity consumption. It follows the structure of the supplied Food Delivery DWDM project, but uses an energy-focused Snowflake Schema and an Isolation Forest model for anomaly detection.
 
@@ -10,8 +9,8 @@ Python, Pandas, scikit-learn
 PostgreSQL and SQL
 Matplotlib and Seaborn
 Folder layout
-smart-electricity-dw/
 
+smart-electricity-dw/
 ├── data/sample_energy_consumption.csv
 ├── python/data_preprocessing.py
 ├── python/anomaly_detection.py
