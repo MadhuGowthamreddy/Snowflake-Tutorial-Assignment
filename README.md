@@ -1,4 +1,5 @@
 Smart Electricity Consumption Data Warehouse
+
 Project overview
 This project implements a data warehouse and data-mining workflow for analysing smart-meter electricity consumption. It follows the structure of the supplied Food Delivery DWDM project, but uses an energy-focused Snowflake Schema and an Isolation Forest model for anomaly detection.
 
@@ -10,6 +11,7 @@ PostgreSQL and SQL
 Matplotlib and Seaborn
 Folder layout
 smart-electricity-dw/
+
 ├── data/sample_energy_consumption.csv
 ├── python/data_preprocessing.py
 ├── python/anomaly_detection.py
@@ -17,6 +19,7 @@ smart-electricity-dw/
 ├── sql/02_etl_load.sql
 ├── sql/03_analytics_queries.sql
 └── requirements.txt
+
 Snowflake schema
 dim_region ──< dim_location ──< dim_consumer ──< fact_energy_usage >── dim_date ──< dim_month ──< dim_year
                                                    │
@@ -31,6 +34,7 @@ Run sql/01_snowflake_schema.sql and then sql/02_etl_load.sql.
 Install dependencies: pip install -r requirements.txt.
 From python/, run python data_preprocessing.py, then import data/cleaned_energy_consumption.csv into raw_energy_consumption.
 Run python anomaly_detection.py. Set DATABASE_URL if PostgreSQL is not local/default.
+
 Key measures
 consumption_kwh: energy used in the interval
 cost_amount: estimated charge for the interval
