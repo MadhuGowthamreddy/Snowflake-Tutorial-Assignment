@@ -20,6 +20,7 @@ SnowSQL
 SQL
 CSV
 GitHub
+
 1. SnowSQL Login and Connection
 Check installation:
 snowsql --version
@@ -31,6 +32,7 @@ SELECT CURRENT_USER(),
        CURRENT_WAREHOUSE(),
        CURRENT_DATABASE(),
        CURRENT_SCHEMA();
+
 2. Creation of Snowflake Objects
 Database
 CREATE DATABASE IF NOT EXISTS SNOWFLAKE_TUTORIAL_DB;
@@ -73,6 +75,7 @@ WHERE STUDENT_ID = 106;
 DELETE
 DELETE FROM STUDENTS
 WHERE STUDENT_ID = 106;
+
 3. Data Loading Using SnowSQL
 The repository includes students.csv.
 Loading Table
@@ -104,6 +107,7 @@ Verify
 SELECT * FROM STUDENT_LOAD;
 SELECT COUNT(*) AS ROW_COUNT FROM STUDENT_LOAD;
 Expected row count: 5
+
 4. Snowflake Time Travel
 Create Table
 CREATE OR REPLACE TABLE TIME_TRAVEL_STUDENTS (
@@ -136,6 +140,7 @@ Replace YOUR_DELETE_QUERY_ID with the actual query ID:
 SELECT *
 FROM TIME_TRAVEL_STUDENTS
 BEFORE (STATEMENT => 'YOUR_DELETE_QUERY_ID');
+
 5. Data Recovery Using Time Travel
 Identify the deleted record:
 SELECT *
@@ -192,7 +197,9 @@ Time Travel query
 Deleted record
 Recovery query
 Final recovered table
+
 Conclusion
+
 This assignment demonstrates SnowSQL connectivity, Snowflake object creation, CRUD operations, CSV data loading, Time Travel, and recovery of accidentally deleted records.
 Security
 Never upload Snowflake passwords, MFA codes, access tokens, private keys, API credentials, or other confidential information to GitHub
